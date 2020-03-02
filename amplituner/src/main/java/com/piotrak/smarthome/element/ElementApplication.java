@@ -12,6 +12,6 @@ public class ElementApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ElementApplication.class, args);
-	}
+	}//TODO: use the abstract-element project
 
 }
