@@ -6,9 +6,9 @@ import javax.validation.constraints.NotNull;
 
 public interface Switchable {
 
-    default SwitchStatus getElementSwitchStatus(){
+    default SwitchStatus getElementSwitchStatus() throws Exception{
         System.out.println("SwitchStatus unavailable");
-        return SwitchStatus.OFF;
+        throw new Exception("Not implemented");
     }
 
     default void switchElement(@NotNull SwitchStatus switchStatus) throws Exception {

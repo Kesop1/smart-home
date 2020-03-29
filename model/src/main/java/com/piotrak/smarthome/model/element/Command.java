@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Builder
 @ToString
-public class Command {
+public class Command {//TODO: id
 
     @ApiModelProperty(notes = "Command")
     private String command;
