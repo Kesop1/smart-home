@@ -16,8 +16,8 @@ import static springfox.documentation.builders.PathSelectors.regex;
 @EnableSwagger2
 public class SwaggerConfiguration {
 
-    @Value("element.name")
-    private String elementName;
+    @Value("${element.displayName}")
+    private String displayName;
 
     @Bean
     public Docket swaggerSettings() {
@@ -25,13 +25,13 @@ public class SwaggerConfiguration {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(regex("/v1/.*"))
+                .paths(regex("/v1/.*"))//TODO: fix the swagger path
                 .build().useDefaultResponseMessages(false);
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title(elementName + " service")
+                .title(displayName + " service")
                 .build();
     }
 

@@ -1,4 +1,4 @@
-package com.piotrak.smarthome.model.element.service;
+package com.piotrak.smarthome.element.service;
 
 import com.piotrak.smarthome.model.element.Command;
 import com.piotrak.smarthome.model.element.connection.Connection;
@@ -12,7 +12,16 @@ public interface CommandableService extends Commandable {
 
     @Override
     default void command(@NotNull Command command) throws Exception {
+        checkElementFunctionality();
         getConnection().sendCommand(command);
     }
+
+    private void checkElementFunctionality() throws Exception {
+        if(!isCommandableEnabled()){
+            throw new Exception("Commandable functionality not supported");
+        }
+    }
+
+    boolean isCommandableEnabled();
 
 }

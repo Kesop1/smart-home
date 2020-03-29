@@ -1,4 +1,4 @@
-package com.piotrak.smarthome.model.element.service;
+package com.piotrak.smarthome.element.service;
 
 import com.piotrak.smarthome.model.element.Command;
 import com.piotrak.smarthome.model.element.SwitchStatus;
@@ -16,4 +16,12 @@ public interface SwitchableService extends Switchable {
         Command command = Command.builder().command(switchStatus.name()).build();
         getConnection().sendCommand(command);
     }
+
+    private void checkElementFunctionality() throws Exception {
+        if(!isSwitchableEnabled()){
+            throw new Exception("Switchable functionality not supported");
+        }
+    }
+
+    boolean isSwitchableEnabled();
 }

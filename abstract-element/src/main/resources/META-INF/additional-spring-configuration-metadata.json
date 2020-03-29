@@ -1,0 +1,49 @@
+{
+  "properties": [
+    {
+      "name": "spring.mvc.servlet.path",
+      "type": "java.lang.String",
+      "description": "Base api URL for the element."
+    },
+    {
+      "name": "spring.application.name",
+      "type": "java.lang.String",
+      "description": "Application's name."
+    },
+    {
+      "name": "element.name",
+      "type": "java.lang.String",
+      "description": "Element's name."
+    },
+    {
+      "name": "element.displayName",
+      "type": "java.lang.String",
+      "description": "Element's name to be displayed in the UI."
+    },
+    {
+      "name": "element.icon",
+      "type": "java.lang.String",
+      "description": "Element's icon to be displayed in the UI."
+    },
+    {
+      "name": "function.commandable",
+      "type": "java.lang.Boolean",
+      "description": "Enable the commandable functionality for the element."
+    },
+    {
+      "name": "function.configurable",
+      "type": "java.lang.Boolean",
+      "description": "Enable the configurable functionality for the element."
+    },
+    {
+      "name": "function.diagnosible",
+      "type": "java.lang.Boolean",
+      "description": "Enable the diagnosible functionality for the element."
+    },
+    {
+      "name": "function.switchable",
+      "type": "java.lang.Boolean",
+      "description": "Enable the switchable functionality for the element."
+    }
+  ]
+}
